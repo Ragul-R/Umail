@@ -1,0 +1,167 @@
+.compose-mail {
+    &::before {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        content: '';
+        background: rgba($archives-color, .4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        transition: opacity ease-in-out .35s;
+    }
+
+    .compose-modal {
+        @include center(true, true);
+        transform: translate(-50%, -200%);
+        width: 550px;
+        background: #fff;
+        border-radius: 8px;
+        transition: transform ease-in-out .5s;
+    }
+}
+
+.show-modal {
+    &::before {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .compose-modal {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.modal-header {
+    background: $archives-color;
+    padding: 20px 30px;
+    border-radius: 8px 8px 0 0;
+    @include clear;
+
+    h3 {
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        text-transform: capitalize;
+        vertical-align: middle;
+    }
+
+    button {
+        float: right;
+        color: #fff;
+        background: none;
+        position: relative;
+        height: 18px;
+        width: 16px;
+        cursor: pointer;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::after,
+        &::before {
+            display: inline-block;
+            content: "";
+            height: 18px;
+            width: 2px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.modal-body {
+    padding: 10px 0 0;
+
+    input,
+    textarea {
+        display: block;
+        border: none;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 10px 20px;
+        width: calc(100% - 40px);
+        color: $archives-color;
+        resize: none;
+        box-shadow: none;
+        border-bottom: 1px solid rgba($archives-color, .2);
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        height: 110px;
+    }
+}
+
+.modal-footer {
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+
+    @include clear;
+
+    .attach-file,
+    .attach-image {
+        display: none;
+
+        & + label {
+            display: inline-block;
+            cursor: pointer;
+
+            &::before {
+                display: inline-block;
+                font-family: 'Icon';
+                font-size: 20px;
+                line-height: 37px;
+                width: 30px;
+                vertical-align: middle;
+                text-align: center;
+                color: $primary-text-color;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            &:hover {
+                &::before {
+                    color: $archives-color;
+                }
+            }
+        }
+    }
+
+    .attach-file {
+        + label {
+            &::before {
+                content: '\e908';
+            }
+        }
+    }
+
+    .attach-image {
+        + label {
+            &::before {
+                font-size: 22px;
+                content: '\e90b';
+            }
+        }
+    }
+
+}

@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Icon';
+    src: url('../fonts/icon/icon.eot');
+    src: url('../fonts/icon/icon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icon/icon.woff') format('woff'),
+        url('../fonts/icon/icon.ttf') format('truetype'),
+        url('../fonts/icon/icon.svg#OpenSans-Regular') format('svg');
+    font-style: normal;
+}
+
+%icon {
+    &::before {
+        content: '';
+        display: inline-block;
+        font-family: 'Icon';
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.icon-inbox {
+    @extend %icon;
+
+    &::before {
+        content: '\e902';
+    }
+}
+
+.icon-outbox {
+    @extend %icon;
+
+    &::before {
+        content: '\e900';
+    }
+
+}
+
+.icon-star {
+    @extend %icon;
+
+    &::before {
+        content: '\e903';
+    }
+
+}
+
+.icon-draft {
+    @extend %icon;
+
+    &::before {
+        content: '\e901';
+    }
+
+}
+
+.icon-trash {
+    @extend %icon;
+
+    &::before {
+        content: '\e904';
+    }
+
+    .modal-footer & {
+        padding: 0;
+        line-height: 37px;
+        width: 30px;
+        font-size: 20px;
+        vertical-align: middle;
+        color: $primary-text-color;
+
+        &:hover {
+            color: $archives-color;
+        }
+    }
+}
+
+.icon-gear {
+    @extend %icon;
+
+    &::before {
+        content: '\e90a';
+    }
+}
+
+.icon-user {
+    @extend %icon;
+
+    &::before {
+        content: '\e909';
+    }
+}
+
+.icon-reply {
+    @extend %icon;
+
+    &::before {
+        content: '\e906';
+    }
+}
+
+.icon-attach {
+    @extend %icon;
+
+    &::before {
+        content: '\e908';
+    }
+}

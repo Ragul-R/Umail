@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UMail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="UMail">
+    <meta name="description" content="UMail, your mailing service">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <header class="header-top">
+        <a href="javascript:void(0);"><span></span>mail</a>
+        <h2>sparrow <span>(2)</span></h2>
+        <div class="searchbox">
+            <label for="search"></label>
+            <input id="search" type="text">
+        </div>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <button class="primary-button" id="new-mail">compose</button>
+            <ul class="sidebar-menu">
+                <li class="menu-active">
+                    <a class="icon-inbox" href="">inbox <span>(2)</span></a>
+                </li>
+                <li>
+                    <a class="icon-outbox" href="">send mail</a>
+                </li>
+                <li>
+                    <a class="icon-star" href="">starred</a>
+                </li>
+                <li>
+                    <a class="icon-draft" href="">drafts</a>
+                </li>
+                <li>
+                    <a class="icon-trash" href="">trash <span>(2)</span></a>
+                </li>
+            </ul>
+
+            <ul id="sidebar-category" class="sidebar-category">
+                <li>
+                    <a href="javasrcipt:void(0);">
+                        <span class="personal-badge"></span>personal
+                        <span>(2)</span>
+                    </a>
+                    <ul class="inner-list">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <figure>
+                                    <img src="images/adam.jpg" alt="personal1">
+                                </figure>
+                                <h4>Adam</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <figure>
+                                    <img src="images/kevi.jpg" alt="personal2">
+                                </figure>
+                                <h4>Kevi</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javasrcipt:void(0);"><span class="clients-badge"></span>clients</a>
+                </li>
+                <li>
+                    <a class="list-toggle" href="javasrcipt:void(0);"><span class="family-badge"></span>family <span>(2)</span></a>
+                    <ul class="inner-list">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <figure>
+                                    <img src="images/john.jpg" alt="family1">
+                                </figure>
+                                <h4>John</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <figure>
+                                    <img src="images/vicky.jpg" alt="family2">
+                                </figure>
+                                <h4>Vicky</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javasrcipt:void(0);"><span class="friends-badge"></span>friends</a>
+                    <ul class="inner-list">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <figure>
+                                    <img src="images/adam.jpg" alt="friends1">
+                                </figure>
+                                <h4>Adam</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <figure>
+                                    <img src="images/vicky.jpg" alt="friends2">
+                                </figure>
+                                <h4>Vicky</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javasrcipt:void(0);"><span class="archives-badge"></span>archives</a>
+                </li>
+            </ul>
+
+            <ul class="sidebar-controls">
+                <li><a href="javascript: void(0);" class="icon-gear"></a></li>
+                <li><a href="javascript: void(0);" class="icon-user"></a></li>
+            </ul>
+        </aside>
+        <section class="mail">
+            <ul class="mail-list">
+                <li>
+                    <h3>My portfolio is up</h3><time>18:57</time>
+                    <h4>Jimmy Raherlarisoa</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="personal-notify"></span>
+                    </div>
+                </li>
+
+                <li class="mail-active">
+                    <h3>feedbacks UI concept</h3><time>15:22</time>
+                    <h4>anne thai</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="friends-notify"></span>
+                    </div>
+                </li>
+                <li>
+                    <h3>dont forget my birthday</h3><time>12:50</time>
+                    <h4>luca tantardini</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="clients-notify"></span>
+                    </div>
+                </li>
+                <li>
+                    <h3>your dropbox account</h3><time>08:34</time>
+                    <h4>dropbox team</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="friends-notify"></span>
+                    </div>
+                </li>
+                <li>
+                    <h3>order confirmation</h3><time>yesterday</time>
+                    <h4>Jimmy Raherlarisoa</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="family-notify"></span>
+                    </div>
+                </li>
+                <li>
+                    <h3>My portfolio is up</h3><time>yesterday</time>
+                    <h4>Jimmy Raherlarisoa</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="friends-notify"></span>
+                    </div>
+                </li>
+                <li>
+                    <h3>check this crazy video</h3><time>yesterday</time>
+                    <h4>antoine farjon</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="friends-notify"></span>
+                    </div>
+                </li>
+                <li>
+                    <h3>hello vincent</h3><time>04/08/19</time>
+                    <h4>maxime messer</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="friends-notify"></span>
+                    </div>
+                </li>
+                <li>
+                    <h3>comment on your article</h3><time>02/08/19</time>
+                    <h4>designmodo</h4>
+
+                    <div class="mail-options">
+                        <a class="icon-attach" href="javascript:void(0);"></a>
+                        <a class="icon-reply" href="javascript:void(0);"></a>
+                        <span class="friends-notify"></span>
+                    </div>
+                </li>
+            </ul>
+            <article class="mail-view">
+                <header class="mail-header">
+                    <figure>
+                        <img src="images/adam.jpg" alt="user-image">
+                        <span class="personal-badge"></span>
+                    </figure>
+
+                    <h2>feedbacks UI concept</h2>
+                    <h4>from:
+                        <a href="javascript:void(0);" id="details-drop">anne thai
+                            <span class="arrow-down"></span>
+                        </a>
+                        <ul class="details" id="details">
+                            <li>From:<a href="#">annethai@umail.com</a></li>
+                            <li>To: <a href="#">johndoe@umail.com</a></li>
+                            <li>Date: Sep 10th, 15:22</li>
+                            <li>Subject: Feedback UI concepts</li>
+                        </ul>
+                    </h4>
+                    <div class="btn-wrapper">
+                        <button class="icon-star"></button>
+                        <button class="icon-draft active-btn"></button>
+                        <button class="icon-trash"></button>
+                        <button class="icon-reply"></button>
+                    </div>
+                </header>
+
+                <div class="mail-body">
+                    <p>Hello Vincent,
+
+                        Forage Etsy chia cliche sriracha. Banh mi sustainable stumptown Pitchfork occupy. Chambray Godard biodiesel Blue Bottle cred fap, you probably haven't heard of them pop-up freegan small batch Shoreditch disrupt four loko viral stumptown.
+
+                        Banjo deep v Tonx Tumblr. Forage direct trade whatever, kale chips lo-fi Blue Bottle DIY church-key flannel street art. Put a bird on it hella actually leggings. Brunch authentic slow-carb, four loko post-ironic twee vegan Marfa fap.
+                        Hoodie Tonx whatever, forage brunch Truffaut pug synth slow-carb paleo fingerstache.
+
+                        Roof party kale chips Neutra, vinyl photo booth dreamcatcher literally. Flexitarian banh mi 3 wolf moon blog, tofu Etsy ethnic bicycle rights banjo. Helvetica retro yr kale chips, wolf locavore disrupt Neutra sartorial mlkshk pork belly leggings church-key cardigan. Blog banh mi bitters tattooed. Ennui try-hard gentrify, Helvetica Echo Park vegan ethical flannel.
+
+                        Aesthetic mixtape chambray messenger bag, cred cardigan semiotics dreamcatcher 90's seitan.
+
+                        Flexitarian single-origin coffee cardigan pug Carles, Tonx wolf Portland Pinterest authentic.
+
+                        Whatever 3 wolf moon artisan synth, flannel locavore Carles iPhone plaid deep v kale chips post-ironic. Mumblecore selvage ethical Portland McSweeney's raw denim, viral swag put a bird on it pop-up +1 tousled Swag Banksy seitan salvia cliche.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="compose-mail">
+            <article class="compose-modal">
+                <div class="modal-header">
+                    <h3>new mail</h3>
+                    <button id="close-modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="email" id="repc" placeholder="Recipents">
+                    <input type="text" id="subject" placeholder="Subject">
+
+                    <textarea name="body" id="body" placeholder="Body"></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="primary-button">send</button>
+
+                    <input id="attach-file" type="file" class="attach-file">
+                    <label for="attach-file"></label>
+
+                    <input id="attach-image" type="file" class="attach-image">
+                    <label for="attach-image"></label>
+
+                    <button class="icon-trash"></button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

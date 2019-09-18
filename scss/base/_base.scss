@@ -1,0 +1,62 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h2 {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 15px;
+    color: $heading-text-color;
+}
+
+h4 {
+    font-size: 13px;
+    color: $heading-text-color;
+    text-transform: capitalize;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: capitalize;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px 2px $primary-blue;
+    }
+}
+
+.primary-button {
+    max-width: 200px;
+    width: 100%;
+    padding: 9px 54px;
+    background: $primary-blue;
+    border: 1px solid $primary-blue;
+    color: #fff;
+
+    &:hover {
+        background: #fff;
+        color: $primary-blue;
+    }
+
+    .modal-footer & {
+        max-width: 140px;
+        padding: 9px 40px;
+        float: right;
+    }
+}
+
+ul {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $light-text-color;
+}
+
+p {
+    font-size: 14px;
+}

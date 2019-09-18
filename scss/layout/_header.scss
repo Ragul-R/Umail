@@ -1,0 +1,90 @@
+.header-top {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+
+    a {
+        float: left;
+
+        span {
+            display: inline-block;
+            border-radius: 100%;
+            background: #000;
+            height: 20px;
+            width: 15px;
+            position: relative;
+            vertical-align: -3px;
+
+            &::after {
+                display: inline-block;
+                content: '';
+                height: 10px;
+                width: 15px;
+                background: #000;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    h2 {
+        display: inline-block;
+        color: $light-text-color;
+        vertical-align: middle;
+    }
+
+    .searchbox {
+        position: absolute;
+        right: 20px;
+        top: 13px;
+        background: none;
+
+        label {
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 15px;
+                transform: translateY(-50%);
+            }
+
+            &::before {
+                content: "\e907";
+                font-family: Icon;
+                color: $search-icon;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                margin-left: 10px;
+            }
+
+            &::after {
+                border: solid $search-icon;
+                border-width: 0 1px 1px 0;
+                height: 3px;
+                width: 3px;
+                transform: rotate(45deg) translateY(-50%);
+                left: 27px;
+            }
+        }
+
+        input {
+            width: 244px;
+            height: 30px;
+            background: none;
+            border-radius: 15px;
+            border: 1px solid rgba(#000, .1);
+            padding: 0 10px 0 40px;
+            font-size: 13px;
+            color: $search-icon;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    @include clear;
+}

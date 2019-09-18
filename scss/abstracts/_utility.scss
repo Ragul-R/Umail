@@ -1,0 +1,77 @@
+%badge {
+    background: none;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border: 3px solid;
+    border-radius: 4px;
+}
+
+.personal-badge {
+    @extend %badge;
+    border-color: $personal-color;
+}
+
+.clients-badge {
+    @extend %badge;
+    border-color: $clients-color;
+}
+
+.family-badge {
+    @extend %badge;
+    border-color: $family-color;
+}
+
+.friends-badge {
+    @extend %badge;
+    border-color: $friends-color;
+}
+
+.archives-badge {
+    @extend %badge;
+    border-color: $archives-color;
+}
+
+%notify {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.personal-notify {
+    @extend %notify;
+    background: $personal-color;
+}
+
+.family-notify {
+    @extend %notify;
+    background: $family-color;
+}
+
+.friends-notify {
+    @extend %notify;
+    background: $friends-color;
+}
+
+.clients-notify {
+    @extend %notify;
+    background: $clients-color;
+}
+
+.archives-notify {
+    @extend %notify;
+    background: $archives-color;
+}
+
+.arrow-down {
+    &::after {
+        display: inline-block;
+        content: '';
+        width: 7px;
+        height: 7px;
+        border: solid $archives-color;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+    }
+}

@@ -1,0 +1,249 @@
+main {
+    @include clear;
+}
+
+.mail {
+    width: calc(100% - 260px);
+    height: 100%;
+    float: left;
+    @include clear;
+}
+
+.mail-list {
+    max-width: calc(100% - 760px);
+    width: 100%;
+    float: left;
+    height: calc(100vh - 72px);
+    overflow: auto;
+
+    li {
+        padding: 30px;
+        border-left: 4px solid transparent;
+
+        h3 {
+            display: inline-block;
+            max-width: calc(100% - 160px);
+            width: 100%;
+            line-height: 1.5;
+            @include text-overflow;
+            cursor: pointer;
+        }
+
+        &:hover {
+            background: rgba($light-text-color, .05);
+        }
+
+        h4 {
+            display: inline-block;
+            font-size: 12px;
+            margin-top: 10px;
+            max-width: calc(100% - 160px);
+            width: 100%;
+            line-height: 14px;
+            max-height: 28px;
+            overflow: hidden;
+        }
+
+        time,
+        .mail-options {
+            float: right;
+
+            a {
+                &::before {
+                    color: rgba(#1e202e, 0.5);
+                }
+            }
+        }
+
+        @include clear;
+    }
+
+    .mail-active {
+        background: rgba($light-text-color, .05);
+        border-left: 4px solid $primary-blue;
+    }
+}
+
+
+.mail-view {
+    float: left;
+    padding: 40px 30px;
+    height: calc(100vh - 60px);
+    width: calc(100% - 480px);
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        display: block;
+        content: '';
+        height: 100px;
+        width: 100%;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(#fff, 0), rgba(#fff, 1));
+        position: absolute;
+    }
+
+
+    .mail-body {
+        max-height: calc(100vh - 90px);
+        overflow: auto;
+
+        p {
+            white-space: pre-line;
+            line-height: 1.5;
+        }
+    }
+}
+
+.mail-header {
+    @include clear;
+    padding-bottom: 35px;
+    border-bottom: 2px solid #eceff3;
+    margin-bottom: 30px;
+    position: relative;
+
+    figure {
+        max-width: 55px;
+        float: left;
+        margin-right: 20px;
+        position: relative;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+        }
+    }
+
+    h2 {
+        color: $heading-text-color;
+        font-size: 18px;
+        display: inline-block;
+        max-width: calc(100% - 320px);
+        width: 100%;
+        @include text-overflow;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        display: inline-block;
+        color: $archives-color;
+        max-width: calc(100% - 320px);
+        @inlcude text-overflow;
+        width: 100%;
+
+        a {
+            display: inline-block;
+            padding: 5px 15px;
+            text-align: center;
+            font-size: 12px;
+            border: 1px solid $light-text-color;
+            border-radius: 12px;
+            position: relative;
+            color: $light-text-color;
+
+            .arrow-down {
+                margin-left: 10px;
+
+                &::after {
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                }
+            }
+        }
+    }
+
+    .btn-wrapper {
+        font-size: 0;
+        @include center(false, true);
+        right: 0;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 17px;
+        transition: all ease-in 200ms;
+
+        button {
+            font-size: 14px;
+            margin: 0;
+            padding: 8px 13px;
+            color: $light-text-color;
+
+            & + button {
+                border-left: 1px solid rgba(0, 0, 0, .07);
+            }
+
+            &:first-child {
+                border-radius: 17px 0 0 17px;
+            }
+
+            &:last-child {
+                border-radius: 0 17px 17px 0;
+            }
+
+            &:hover {
+                background: $primary-blue;
+                color: #fff;
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 1px 2px $primary-blue;
+            }
+        }
+
+        .active-btn {
+            background: $primary-blue;
+            color: #fff;
+        }
+    }
+}
+
+
+.details {
+    position: absolute;
+    margin-top: 20px;
+    border: 1px solid $primary-text-color;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 1px 2px 1px 2px rgba(#000, .1);
+    background: #fff;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform ease-in-out .35s;
+
+    &::before {
+        content: "";
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent $primary-text-color transparent;
+        position: absolute;
+        top: -10px;
+        left: 100px;
+    }
+
+    li {
+
+        a {
+            color: $heading-text-color;
+            margin-left: 5px;
+            max-width: 200px;
+            @include text-overflow;
+            vertical-align: middle;
+            text-transform: none;
+        }
+
+        & + li {
+            margin-top: 20px;
+        }
+    }
+}
+
+.show-details {
+    transform: scaleY(1);
+}
